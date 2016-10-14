@@ -1,0 +1,50 @@
+---
+- name: install vim (Mac)
+  homebrew: name={{ item }} state=present
+  with_items:
+    - vim
+    - macvim
+  when: ansible_os_family == 'Darwin'
+
+  # TODO: deal with preexisting .vim folder
+  # TODO: do we need to run `rake` to install janus?
+- name: install janus
+  git:
+    repo: https://github.com/carlhuda/janus.git
+    dest: ~/.vim
+
+- name: add janus customization
+  git:
+    repo: https://github.com/rcarlsen/janus-config.git
+    dest: "{{downloads}}janus-config"
+
+- name: add janus plugins folder
+  file:
+    state: link
+    dest: ~/.janus
+    src: "{{downloads}}janus-config/plugins"
+
+- name: link vimrc.before
+  file:
+    state: link
+    dest: ~/.vimrc.before
+    src: "{{downloads}}janus-config/vimrc.before"
+
+- name: link gvimrc.before
+  file:
+    state: link
+    dest: ~/.gvimrc.before
+    src: "{{downloads}}janus-config/gvimrc.before"
+
+- name: link vimrc.after
+  file:
+    state: link
+    dest: ~/.vimrc.after
+    src: "{{downloads}}janus-config/vimrc.after"
+
+- name: link gvimrc.after
+  file:
+    state: link
+    dest: ~/.gvimrc.after
+    src: "{{downloads}}janus-config/gvimrc.after"
+

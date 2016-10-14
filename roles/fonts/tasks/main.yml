@@ -1,0 +1,18 @@
+# install firacode
+- name: download firacode
+  git:
+    repo: https://github.com/tonsky/FiraCode.git
+    dest: "{{ downloads }}firacode"
+
+# must link or move fonts to ~/Library/Fonts
+- name: install fonts
+  find:
+    paths: "{{ downloads }}firacode"
+    recurse: yes
+    patterns: "*.ttf"
+  register: fonts
+
+- copy:
+    src: "{{ item.path }}"
+    dest: ~/Library/Fonts/
+  with_items: "{{fonts.files}}"

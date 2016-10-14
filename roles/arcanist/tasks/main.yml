@@ -1,0 +1,17 @@
+- name: download arcanist
+  git:
+    repo: https://github.com/phacility/arcanist.git
+    version: origin/stable
+    dest: "{{downloads}}arcanist"
+
+- name: download phutils
+  git:
+    repo: https://github.com/phacility/libphutil.git
+    version: origin/stable
+    dest: "{{downloads}}libphutil"
+
+- name: link arc command
+  file:
+    state: link
+    dest: /usr/local/bin/arc
+    src: "{{downloads}}arcanist/bin/arc"

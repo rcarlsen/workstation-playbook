@@ -1,0 +1,109 @@
+---
+# tilde expansion does not seem to work with some file modules
+downloads: "{{ansible_env.HOME}}/.ansible-downloads/"
+
+dotfiles_repo: https://github.com/rcarlsen/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_files:
+  - .bash_profile
+  - .gitconfig
+  - .gitignore
+  - .osx.sh
+
+homebrew_installed_packages:
+  # - ansible # Installed via bootstrap.sh
+  - autoconf
+  - bash-completion
+  - carthage
+  - ctags
+  - dockutil
+  - git
+  - gpg
+  - hub
+  - keybase
+  - mysql
+  - openssl
+  - sqlite
+  - swiftlint # unsure if this is compatible with swift 3.0, yet
+  - watch
+  - wget
+  - xctool
+
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - dropbox
+  - macvim
+  - ios-console
+  - iterm2
+  - istat-menus
+  - hex-fiend
+  - flux
+  - geektool
+  - gpgtools
+  - libreoffice
+  - paintcode
+  - sequel-pro
+  - shortcat
+  - slack
+  - virtualbox
+  - vlc
+  # optional installs?
+  #- gimp
+  #- inkscape
+  #- wwdc
+  #- wireshark
+
+# only if using dockuitl
+dockitems_to_remove:
+  - Launchpad
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+  - Calendar
+
+dockitems_to_persist:
+  - name: Console
+    path: /Applications/Utilities/Console.app
+    pos: 1
+  - name: iTerm
+    path: /Applications/iTerm.app
+    pos: 2
+  - name: Calendar
+    path: /Applications/Calendar.app
+    pos: 3
+  - name: Mail
+    path: /Applications/Mail.app
+    pos: 4
+  - name: Slack
+    path: /Applications/Slack.app
+    pos: 5
+  - name: Messages
+    path: /Applications/Messages.app
+    pos: 6
+  - name: Safari
+    path: /Applications/Safari.app
+    pos: 7
+  - name: iTunes
+    path: /Applications/iTunes.app
+    pos: 8
+  - name: MacVim
+    path: /Applications/MacVim.app
+    pos: 9
+  - name: Xcode
+    path: /Applications/Xcode.app
+    pos: 10

@@ -16,6 +16,7 @@ homebrew_installed_packages:
   - autoconf
   - bash-completion
   - carthage
+  - cmake
   - ctags
   - dockutil
   - git

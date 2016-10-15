@@ -54,3 +54,6 @@
     dest: ~/.gvimrc.after
     src: "{{downloads}}janus-config/gvimrc.after"
 
+- name: compile YouCompleteMe plugin
+  command: bash -lc "cd ~/.janus/YouCompleteMe && ./install.py --clang-completer"
+

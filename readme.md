@@ -19,6 +19,7 @@ It should apply on top of an existing installation, but YMMV.
   - LightBlue
 - manually install additional apps
   - Charles Proxy
+  - PaintCode
 - manually install Ghostery Safari extension
 - enable FileVault
 

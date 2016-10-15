@@ -46,17 +46,17 @@ homebrew_cask_apps:
   - geektool
   - gpgtools
   - libreoffice
-  - paintcode
+  #- paintcode # this failed to install, and seems to be a trial.
   - sequel-pro
   - shortcat
   - slack
   - virtualbox
   - vlc
-  # optional installs?
-  #- gimp
-  #- inkscape
-  #- wwdc
-  #- wireshark
+  # below are maybe optional installs?
+  - gimp
+  - inkscape
+  - wwdc
+  - wireshark
 
 # only if using dockuitl
 dockitems_to_remove:

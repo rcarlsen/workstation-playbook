@@ -11,11 +11,13 @@
 - name: install janus
   git:
     repo: https://github.com/carlhuda/janus.git
+    accept_hostkey: yes
     dest: ~/.vim
 
 - name: add janus customization
   git:
     repo: https://github.com/rcarlsen/janus-config.git
+    accept_hostkey: yes
     dest: "{{downloads}}janus-config"
 
 - name: add janus plugins folder

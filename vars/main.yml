@@ -54,6 +54,7 @@ homebrew_cask_apps:
   - vlc
   # below are maybe optional installs?
   - gimp
+  - xquartz # dependency for inkscape
   - inkscape
   - wwdc
   - wireshark

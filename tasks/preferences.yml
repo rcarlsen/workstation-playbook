@@ -1,3 +1,4 @@
 ---
 - name: install Programmer Dvorak keylayout
   shell: installer -pkg files/Programmer\ Dvorak\ v1.2.pkg -target /
+  become: yes

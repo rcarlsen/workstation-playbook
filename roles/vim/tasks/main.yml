@@ -9,11 +9,14 @@
 
   # TODO: deal with preexisting .vim folder
   # TODO: do we need to run `rake` to install janus?
-- name: install janus
+- name: download janus
   git:
     repo: https://github.com/carlhuda/janus.git
     accept_hostkey: yes
     dest: ~/.vim
+
+- name: install / update janus
+  command: bash -lc "cd ~/.vim && rake"
 
 - name: add janus customization
   git:

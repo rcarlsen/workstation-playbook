@@ -18,6 +18,5 @@
   with_items: "{{fonts.files}}"
 
 - name: install Programmer Dvorak keylayout
-  command: installer -pkg Programmer\ Dvorak\ v1.2.pkg -target /
-    chdir: files
+  command: chdir=files installer -pkg Programmer\ Dvorak\ v1.2.pkg -target /
 

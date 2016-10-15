@@ -25,10 +25,10 @@ homebrew_installed_packages:
   - mysql
   - openssl
   - sqlite
-  - swiftlint # unsure if this is compatible with swift 3.0, yet
   - watch
   - wget
-  - xctool
+  #- swiftlint # unsure if this is compatible with swift 3.0, yet
+  #- xctool # this is not building with xcode 8, yet
 
 homebrew_taps:
   - caskroom/cask
@@ -101,9 +101,12 @@ dockitems_to_persist:
   - name: iTunes
     path: /Applications/iTunes.app
     pos: 8
+  - name: Hex Fiend
+    path: "/Applications/Hex Fiend.app"
+    pos: 9
   - name: MacVim
     path: /Applications/MacVim.app
-    pos: 9
+    pos: 10
   - name: Xcode
     path: /Applications/Xcode.app
-    pos: 10
+    pos: 11

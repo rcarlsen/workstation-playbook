@@ -48,6 +48,7 @@ homebrew_cask_apps:
   - gpgtools
   - libreoffice
   #- paintcode # this failed to install, and seems to be a trial.
+  - programmer-dvorak
   - sequel-pro
   - shortcat
   - slack

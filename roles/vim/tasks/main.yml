@@ -1,10 +1,11 @@
 ---
-- name: install vim (Mac)
-  homebrew: name={{ item }} state=present
-  with_items:
-    - vim
-    - macvim
-  when: ansible_os_family == 'Darwin'
+# vim should have been installed in the homebrew role
+#- name: install vim (Mac)
+  #homebrew: name={{ item }} state=present
+  #with_items:
+    #- vim
+    #- macvim
+  #when: ansible_os_family == 'Darwin'
 
   # TODO: deal with preexisting .vim folder
   # TODO: do we need to run `rake` to install janus?

@@ -1,6 +1,11 @@
 # install color theme to xcode
 # /Users/rcarlsen/Library/Developer/Xcode/UserData/FontAndColorThemes
 
+- name: Ensure Xcode FontAndColorThemes exists
+  file:
+    path: "{{ansible_env.HOME}}/Library/Developer/Xcode/UserData/FontAndColorThemes"
+    state: directory
+
 - name: Add Solarized Dark theme to Xcode
   copy:
     src: "files/Solarized-Dark FiraCode.dvtcolortheme"

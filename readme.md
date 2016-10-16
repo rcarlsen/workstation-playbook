@@ -14,13 +14,14 @@ It should apply on top of an existing installation, but YMMV.
 - run bootstrap.sh
 - ... should install most tools
 - manually install Mac App Store apps
-  - 1Password
   - Calca
   - LightBlue
 - manually install additional apps
   - Charles Proxy
   - PaintCode
 - manually install Ghostery Safari extension
+- setup ShortCat (Security -> Assistive access)
+- setup iStat Menus
 - enable FileVault
 
 ## Configuration
@@ -29,5 +30,3 @@ It should apply on top of an existing installation, but YMMV.
 - Create / add SSH keys
 - Configure GPG / keybase
 - Configure editors with FiraCode font and themes
-- (may) have to run `rake` in the ~/.vim/ directory to complete janus
-  installation.

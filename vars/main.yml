@@ -50,6 +50,7 @@ homebrew_cask_apps:
   - libreoffice
   #- paintcode # this failed to install, and seems to be a trial.
   #- programmer-dvorak # this is failing to install.
+  - qlmarkdown
   - sequel-pro
   - shortcat
   - slack

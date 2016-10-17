@@ -22,6 +22,7 @@
   git:
     repo: https://github.com/rcarlsen/janus-config.git
     accept_hostkey: yes
+    force: yes
     dest: "{{downloads}}janus-config"
 
 - name: add janus plugins folder

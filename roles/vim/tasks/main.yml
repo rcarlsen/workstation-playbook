@@ -8,11 +8,11 @@
   #when: ansible_os_family == 'Darwin'
 
   # TODO: deal with preexisting .vim folder
-  # TODO: do we need to run `rake` to install janus?
 - name: download janus
   git:
     repo: https://github.com/carlhuda/janus.git
     accept_hostkey: yes
+    force: yes
     dest: ~/.vim
 
 - name: install / update janus

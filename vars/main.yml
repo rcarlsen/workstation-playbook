@@ -34,7 +34,7 @@ homebrew_installed_packages:
 
 homebrew_taps:
   - caskroom/cask
-  - homebrew/versions
+  #- homebrew/versions # this is deprecated and homebrew/core supports versions now
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:

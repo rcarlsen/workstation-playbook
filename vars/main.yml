@@ -40,28 +40,28 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - cocoarestclient
-  - dropbox
+  #- dropbox
   - macvim
   - ios-console
   - iterm2
   - istat-menus
   - hex-fiend
-  - flux
+  #- flux
   - geektool
   - gpgtools
-  - libreoffice
+  #- libreoffice
   #- paintcode # this failed to install, and seems to be a trial.
   #- programmer-dvorak # this is failing to install.
   - qlmarkdown
   - sequel-pro
   - shortcat
-  - slack
-  - virtualbox
+  #- slack
+  #- virtualbox
   - vlc
   # below are maybe optional installs?
   - gimp
-  - xquartz # dependency for inkscape
-  - inkscape
+  #- xquartz # dependency for inkscape
+  #- inkscape
   - wwdc
   - wireshark
 

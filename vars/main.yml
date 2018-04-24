@@ -23,7 +23,6 @@ homebrew_installed_packages:
   - git-lfs
   - gpg
   - hub
-  - keybase
   - mysql
   - openssl
   - sqlite
@@ -49,6 +48,7 @@ homebrew_cask_apps:
   #- flux
   - geektool
   - gpgtools
+  - keybase
   #- libreoffice
   #- paintcode # this failed to install, and seems to be a trial.
   #- programmer-dvorak # this is failing to install.

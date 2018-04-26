@@ -4,7 +4,7 @@ downloads: "{{ansible_env.HOME}}/.ansible-downloads/"
 
 dotfiles_repo: https://github.com/rcarlsen/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_repo_local_destination: "{{ downloads }}dotfiles"
 dotfiles_files:
   - .bash_profile
   - .gitconfig

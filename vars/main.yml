@@ -20,6 +20,7 @@ homebrew_installed_packages:
   - ctags
   - dockutil
   - git
+  - git-flow
   - git-lfs
   - gpg
   - hub
@@ -40,6 +41,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - cocoarestclient
+  - carbon-copy-cloner
   - dropbox
   - macvim
   - ios-console

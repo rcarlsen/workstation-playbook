@@ -4,9 +4,10 @@ downloads: "{{ansible_env.HOME}}/.ansible-downloads/"
 
 dotfiles_repo: https://github.com/rcarlsen/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_repo_local_destination: "{{ downloads }}dotfiles"
 dotfiles_files:
   - .bash_profile
+  - .emacs
   - .gitconfig
   - .gitignore
   - .osx.sh
@@ -24,7 +25,6 @@ homebrew_installed_packages:
   - git-lfs
   - gpg
   - hub
-  - keybase
   - mysql
   - openssl
   - sqlite
@@ -35,7 +35,7 @@ homebrew_installed_packages:
 
 homebrew_taps:
   - caskroom/cask
-  - homebrew/versions
+  #- homebrew/versions # this is deprecated and homebrew/core supports versions now
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -44,26 +44,28 @@ homebrew_cask_apps:
   - carbon-copy-cloner
   - dropbox
   - macvim
+  - emacs
   - ios-console
   - iterm2
   - istat-menus
   - hex-fiend
-  - flux
+  #- flux
   - geektool
   - gpgtools
-  - libreoffice
+  - keybase
+  #- libreoffice
   #- paintcode # this failed to install, and seems to be a trial.
   #- programmer-dvorak # this is failing to install.
   - qlmarkdown
   - sequel-pro
   - shortcat
-  - slack
-  - virtualbox
+  #- slack
+  #- virtualbox
   - vlc
   # below are maybe optional installs?
   - gimp
-  - xquartz # dependency for inkscape
-  - inkscape
+  #- xquartz # dependency for inkscape
+  #- inkscape
   - wwdc
   - wireshark
 
@@ -113,9 +115,12 @@ dockitems_to_persist:
   - name: Hex Fiend
     path: "/Applications/Hex Fiend.app"
     pos: 9
+  - name: Emacs
+    path: /Applications/Emacs.app
+    pos: 10
   - name: MacVim
     path: /Applications/MacVim.app
-    pos: 10
+    pos: 11
   - name: Xcode
     path: /Applications/Xcode.app
-    pos: 11
+    pos: 12

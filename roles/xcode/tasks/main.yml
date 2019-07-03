@@ -10,3 +10,9 @@
   copy:
     src: "files/Solarized-Dark FiraCode.dvtcolortheme"
     dest: "{{ansible_env.HOME}}/Library/Developer/Xcode/UserData/FontAndColorThemes/Solarized-Dark FiraCode.dvtcolortheme"
+
+- name: Add Solarized Dark alternate theme to Xcode
+  copy:
+    src: "files/Solarized-Dark alt FiraCode.xccolortheme"
+    dest: "{{ansible_env.HOME}}/Library/Developer/Xcode/UserData/FontAndColorThemes/Solarized-Dark alt FiraCode.xccolortheme"
+

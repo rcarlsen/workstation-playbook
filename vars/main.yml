@@ -2,7 +2,7 @@
 # tilde expansion does not seem to work with some file modules
 downloads: "{{ansible_env.HOME}}/.ansible-downloads/"
 
-dotfiles_repo: https://github.com/rcarlsen/dotfiles.git
+dotfiles_repo: git@github.com:rcarlsen/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: "{{ downloads }}dotfiles"
 dotfiles_files:
@@ -12,6 +12,7 @@ dotfiles_files:
   - .gitignore
   - .osx.sh
 
+homebrew_upgrade_all_packages: true
 homebrew_installed_packages:
   # - ansible # Installed via bootstrap.sh
   - autoconf
@@ -38,6 +39,7 @@ homebrew_taps:
   #- homebrew/versions # this is deprecated and homebrew/core supports versions now
 
 homebrew_cask_appdir: /Applications
+homebrew_cask_accept_external_apps: true
 homebrew_cask_apps:
   - 1password
   - cocoarestclient
@@ -49,25 +51,21 @@ homebrew_cask_apps:
   - iterm2
   - istat-menus
   - hex-fiend
-  #- flux
   - geektool
-  - gpgtools
+  - gpg-suite
   - keybase
-  #- libreoffice
-  #- paintcode # this failed to install, and seems to be a trial.
-  #- programmer-dvorak # this is failing to install.
-  - qlmarkdown
   - sequel-pro
   - shortcat
-  #- slack
-  #- virtualbox
+  - slack
   - vlc
   # below are maybe optional installs?
+  #- libreoffice
+  #- virtualbox
   - gimp
   #- xquartz # dependency for inkscape
   #- inkscape
   - wwdc
-  - wireshark
+  #- wireshark
 
 # only if using dockuitl
 dockitems_to_remove:

@@ -6,8 +6,8 @@
     - vars/main.yml
 
   roles:
-    - geerlingguy.homebrew
     - geerlingguy.dotfiles
+    - geerlingguy.homebrew
     - arcanist
     - fonts
     - vim

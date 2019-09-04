@@ -13,6 +13,7 @@
     - vim
     - xcode
     - dock
+    - ohmyzsh
 
   tasks:
     - include: tasks/preferences.yml

@@ -3,12 +3,12 @@
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
     dest: "{{ downloads }}oh-my-zsh"
-    register: download
+  register: download
 
 # must link to the location expected by dotfiles
 - name: install oh-my-zsh
   file:
+    path: ~/.oh-my-zsh
     src: "{{ downloads }}oh-my-zsh"
-    dest: ~/.oh-my-zsh/
     state: link
   when: download is success
